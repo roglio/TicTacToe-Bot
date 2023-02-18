@@ -2,7 +2,7 @@
 #include <Servo.h>
 #include <SPI.h>
 #include <SD.h>
-#include <Adafruit_VS1053.h>
+//#include <Adafruit_VS1053.h>
 #include <StandardCplusplus.h>
 #include <cstdlib>
 #include <string>
