@@ -70,7 +70,7 @@ void parse_int(string inpt, char &cmd, int32_t &value)
     temp_arg_char += inpt[i];
   }
 
-  value = stoi(temp_arg_char);
+  value = atoi(temp_arg_char.c_str()); //was stoi(temp_arg_char)
 }
 
 void error_blink(uint8_t errcode)

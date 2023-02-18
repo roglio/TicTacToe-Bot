@@ -370,7 +370,7 @@ gcode_command_floats::gcode_command_floats(vector<string> inputs)
 float gcode_command_floats::fetch(char com_key)
 {
   vector<char>::iterator itr = find(commands.begin(), commands.end(), com_key);
-  if (itr != commands.cend())
+  if (itr != commands.end()) //was .cend
   {
     return values[distance(commands.begin(), itr)];
   }
@@ -381,7 +381,7 @@ float gcode_command_floats::fetch(char com_key)
 bool gcode_command_floats::com_exists(char com_key)
 {
   vector<char>::iterator itr = find(commands.begin(), commands.end(), com_key);
-  if (itr != commands.cend())
+  if (itr != commands.end()) //was .cend
   {
     return true;
   }
@@ -403,6 +403,6 @@ void gcode_command_floats::parse_float(string inpt, char &cmd, float &value)
       temp_arg_char += inpt[i];
     }
   
-    value = stof(temp_arg_char);
+    value = atof(temp_arg_char.c_str()); //was stof(temp_arg_char)
   }
 }

@@ -1,7 +1,7 @@
 #include "tacbot.h"
 #include "funks.h"
 
-#define Serial SERIAL_PORT_USBVIRTUAL
+//#define Serial SERIAL_PORT_USBVIRTUAL
 
 // Speaker stuff
 //Adafruit_VS1053_FilePlayer musicPlayer = 
